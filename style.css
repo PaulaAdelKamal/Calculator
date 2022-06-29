@@ -1,0 +1,58 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #730202, #BF0404, #D97904, #F29F05, #D9B504);
+}
+.calculator-grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 11%);
+    grid-template-rows: minmax(120px, auto) repeat(5, 11%);
+}
+.calculator-grid > button {
+    cursor : pointer;
+    font-size: 2rem;
+    border: 3px solid rgba(255, 255, 255, 0.452);
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+    padding:3%;
+    margin-right: 8%;
+}
+.calculator-grid > button:hover {
+    background: rgba(255,255,255,.95);
+}
+.span-two{
+    grid-column: span 2;
+}
+.output{
+    grid-column: 1 /  -1;
+    background-color:rgba(0,0,0,0.6);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 10px;
+    border: 5px solid rgba(255, 255, 255, 0.63);
+}
+.output .previous-operand{
+    color: rgba(255,255,255,.75);
+    padding : 10px;
+    font-size: 1.5rem;
+}
+
+.output .current-operand{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    padding: 20px;
+}
